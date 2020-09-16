@@ -37,4 +37,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Este método, contiene la relación la palabra que tiene el método es la que usará el ORM
+    public function posts(){
+        // Un usuario puede tener muchos posts
+        return $this->hasMany(Post::class);
+    }
+    
+    // Cambiar el  formato de los campos obtenidos
+    public function getGetNameAttribute(){
+        return ucwords($this->name);
+    }
+
+    // Cuando se trate del campo name, quiero que exita esta configuración cuando se guarde los datos
+    public function setNameAttribute($value){
+        $this->attributes['name'] = strtolower($value);
+    }
+
 }
