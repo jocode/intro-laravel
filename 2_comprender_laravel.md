@@ -101,7 +101,7 @@ Route::get('/example', 'ExampleController@...')
 
 Acá y en el video de la clase vimos la forma correcta de proteger a nuestras rutas o métodos en controladores, lo importante es definir qué queremos proteger o interceder y crear la lógica en un archivo aparte. Una persona con poca experiencia usaría estos if pero en las vistas, en cada método de un controlador o en cada una de las rutas. Esto funcionaria pero no es la manera correcta de trabajar.
 
-> **Los middleware por lo general se colocan en las rutas para evitar hacer tam largos los controladores.**
+> **Los middleware por lo general se colocan en las rutas para evitar hacer tan| largos los controladores.**
 
 Formas de definir las rutas en Laravel
 
